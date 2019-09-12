@@ -4,8 +4,8 @@ CASystemの個人開発用リポジトリ
 ## システム構成
 参考文献(https://qiita.com/tozastation/items/a69a102fdc3f62d566b4)
 
+```
 ├── domain: ドメイン層
-
 │   ├── repository: 依存性逆転の原則
 │   └── service: ロジック
 ├── implements: アプリケーション層
@@ -20,6 +20,7 @@ CASystemの個人開発用リポジトリ
 │   └── handler: ハンドラー
 ├── main.go: ルーティング
 └── vendor: Goのパッケージ
+```
 
 ## 技術選定
 
