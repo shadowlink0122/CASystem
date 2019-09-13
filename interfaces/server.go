@@ -1,4 +1,4 @@
-package pkg
+package interfaces
 
 import (
 	"net/http"
