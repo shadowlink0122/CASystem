@@ -3,12 +3,12 @@ package main
 import (
 	"net/http/cgi"
 
-	"CASystem/pkg"
+	"CASystem/interfaces"
 )
 
 func main() {
 	// demo
-	pkg.Serve()
+	interfaces.Serve()
 
 	// Run CGI Server
 	cgi.Serve(nil)
