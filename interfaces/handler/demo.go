@@ -14,7 +14,6 @@ type demoGetResponse struct {
 // HandleDemoGet is GET Demo message
 func HandleDemoGet() http.HandlerFunc {
 	return func(writer http.ResponseWriter, request *http.Request) {
-		// 
 		msg, err := di.Demo.GetMessage()
 		if err != nil {
 			log.Println(err)
