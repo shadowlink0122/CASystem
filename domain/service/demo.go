@@ -1,15 +1,15 @@
 package service
 
-// DemoService is interface
-type DemoService interface {
+// demoService is interface
+type demoService interface {
 	GetMessage() (string, error)
 }
 
 // Demo is object
 type Demo struct{}
 
-// New is Create new instanse
-func New() DemoService {
+// NewDemo is Create new instanse
+func NewDemo() demoService {
 	return &Demo{}
 }
 
