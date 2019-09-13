@@ -15,6 +15,8 @@ type demoGetResponse struct {
 // HandleDemoGet is GET Demo message
 func HandleDemoGet() http.HandlerFunc {
 	return func(writer http.ResponseWriter, request *http.Request) {
+		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+
 		msg, err := di.Demo.GetMessage()
 		if err != nil {
 			log.Println(err)
