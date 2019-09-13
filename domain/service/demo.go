@@ -1,7 +1,7 @@
 package service
 
-// demoService is interface
-type demoService interface {
+// DemoService is interface
+type DemoService interface {
 	GetMessage() (string, error)
 }
 
@@ -9,11 +9,11 @@ type demoService interface {
 type Demo struct{}
 
 // NewDemo is Create new instanse
-func NewDemo() demoService {
-	return &Demo{}
+func NewDemo() DemoService {
+	return Demo{}
 }
 
 // GetMessage is GET test message
-func (d *Demo) GetMessage() (string, error) {
+func (d Demo) GetMessage() (string, error) {
 	return "Demo API", nil
 }
