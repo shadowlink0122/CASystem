@@ -15,5 +15,5 @@ func NewDemo() DemoService {
 
 // GetMessage is GET test message
 func (d Demo) GetMessage() (string, error) {
-	return "Demo API", nil
+	return "Hello World", nil
 }
