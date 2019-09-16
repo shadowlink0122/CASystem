@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  apache:
+    build: ./apache
+    ports:
+      - 8080:80
+    volumes:
+      - ../public:/var/www/html
+      - ./apache/sites-available:/etc/apache2/sites-available
+
+  go:
+    image: golang:1.12
+    volumes:
+      - ../:/go/src
+    tty: true
+    working_dir: /go/src
+    environment:
+      GO111MODULE: 'on'
