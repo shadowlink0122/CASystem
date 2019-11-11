@@ -7,15 +7,17 @@ CASystemの個人開発用リポジトリ
 ```
 ├── docker: 仮想環境設定
 ├── public: 実行ファイル
+├── test:   実行確認
 ├── pkg:
 │   ├── application: ビジネスロジック
-│   ├── di: 依存性の注入
-│   ├── infra: 外部との通信
+│   ├── di:          依存性の注入
+│   ├── infra:       外部との通信
+│   ├── DB:          データベースのマイグレーション
 │   └── server
-│       ├── handler: エンドポイント
+│       ├── handler:    エンドポイント
 │       ├── middleware: 認証
 │       ├── response
-│       └── server.go: ルーティング
+│       └── server.go:  ルーティング
 ├── main.go
 └── Makefile: ビルド設定
 ```
