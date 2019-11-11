@@ -15,5 +15,24 @@ services:
       - ../:/go/src
     tty: true
     working_dir: /go/src
+    ports:
+      - 8081:8081
     environment:
       GO111MODULE: 'on'
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: CASystem
+      DB_USER: root
+      DB_PASS: 
+    depends_on:
+      - db
+  
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: CASystem
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
